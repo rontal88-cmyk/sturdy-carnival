@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import { HomePage } from '@/pages/HomePage';
 import { ProjectsListPage } from '@/pages/ProjectsListPage';
@@ -12,7 +12,7 @@ import { ExportReportPage } from '@/pages/ExportReportPage';
 export default function App() {
   return (
     <TooltipProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsListPage />} />
@@ -24,7 +24,7 @@ export default function App() {
           <Route path="/projects/:id/report" element={<ExportReportPage />} />
           <Route path="/projects/:id/report/:stakeholder" element={<ExportReportPage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </TooltipProvider>
   );
 }
