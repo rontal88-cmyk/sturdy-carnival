@@ -8,6 +8,7 @@ import { ImpactBuilderPage } from '@/pages/ImpactBuilderPage';
 import { ResultsDashboardPage } from '@/pages/ResultsDashboardPage';
 import { ScenarioAnalysisPage } from '@/pages/ScenarioAnalysisPage';
 import { ExportReportPage } from '@/pages/ExportReportPage';
+import { SystemicImpactPresentationPage } from '@/pages/SystemicImpactPresentationPage';
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/projects/:id/scenarios" element={<ScenarioAnalysisPage />} />
           <Route path="/projects/:id/report" element={<ExportReportPage />} />
           <Route path="/projects/:id/report/:stakeholder" element={<ExportReportPage />} />
+          <Route path="/presentation" element={<SystemicImpactPresentationPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
