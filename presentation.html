@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אימוץ פרספקטיבה של אימפקט מערכתי - בוראות</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&family=Heebo:wght@300;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #002D42;
+            --secondary: #00A3A3;
+            --accent: #FF6B6B;
+        }
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f1f5f9;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Heebo', sans-serif;
+        }
+        .slide {
+            display: none;
+            height: 650px;
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .slide.active {
+            display: flex;
+            flex-direction: column;
+        }
+        .iceberg-level {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .iceberg-level:hover {
+            background-color: #f0fdfa;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden relative border border-slate-200">
+
+        <!-- Top Navigation / Progress -->
+        <div class="absolute top-0 left-0 w-full h-1.5 bg-slate-100 flex">
+            <div id="progress-bar" class="h-full bg-[#00A3A3] transition-all duration-500" style="width: 8.33%;"></div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="p-12 md:p-16 h-full flex flex-col justify-between" style="min-height: 650px;">
+
+            <!-- Slide 1: Title -->
+            <div class="slide active" id="slide-0">
+                <div class="text-center my-auto space-y-8">
+                    <div class="w-24 h-24 bg-teal-50 rounded-3xl flex items-center justify-center mx-auto rotate-3">
+                        <i class="fa-solid fa-seedling text-5xl text-[#00A3A3]"></i>
+                    </div>
+                    <h1 class="text-6xl font-black text-[#002D42] leading-tight">אימוץ פרספקטיבה של<br><span class="text-[#00A3A3]">אימפקט מערכתי</span></h1>
+                    <p class="text-2xl text-slate-500 max-w-2xl mx-auto">חממת בוראות | משיפור חוויה נקודתית להתייעלות מערכתית רחבה</p>
+                    <div class="flex justify-center gap-4 pt-10">
+                        <span class="px-4 py-2 bg-slate-100 rounded-full text-xs font-bold text-slate-500">SYSTEMIC THINKING</span>
+                        <span class="px-4 py-2 bg-teal-50 rounded-full text-xs font-bold text-teal-600">VALUE-BASED IMPACT</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: The Core Shift -->
+            <div class="slide" id="slide-1">
+                <h2 class="text-3xl font-black text-[#002D42] mb-10 border-r-8 border-[#00A3A3] pr-4">השיפט: מ"חמלה" ל"ערך"</h2>
+                <div class="grid grid-cols-2 gap-12 items-center flex-grow">
+                    <div class="space-y-6">
+                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-100">
+                            <h4 class="font-bold text-slate-400 uppercase text-xs mb-2">המבט הליניארי (הישן)</h4>
+                            <p class="text-slate-700 text-lg">טיפול בסימפטום: "המטופלת חרדה, בואו נקל עליה כדי שתרגיש טוב יותר."</p>
+                        </div>
+                        <i class="fa-solid fa-arrow-down text-teal-500 text-2xl mr-10"></i>
+                        <div class="p-6 bg-teal-50 rounded-2xl border border-teal-100">
+                            <h4 class="font-bold text-teal-600 uppercase text-xs mb-2">המבט המערכתי (החדש)</h4>
+                            <p class="text-[#002D42] text-lg font-bold">זיהוי נקודת המינוף: "החרדה יוצרת כשל תפעולי, ביטולי תורים ואי-היענות. נפתור את החרדה כדי להציל חיים ולחסוך משאבים."</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-900 rounded-3xl p-10 text-white relative overflow-hidden">
+                        <i class="fa-solid fa-chart-pie absolute -bottom-10 -left-10 text-9xl opacity-10"></i>
+                        <h3 class="text-2xl font-bold mb-6 text-teal-400">למה זה חשוב למערכת?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1"></i> <span>צמצום No-shows (ביטולי תורים)</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1"></i> <span>העלאת אחוזי גילוי מוקדם</span></li>
+                            <li class="flex items-start gap-3"><i class="fa-solid fa-check text-teal-500 mt-1"></i> <span>ייעול "זמן כיסא" של הצוות</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: The Iceberg Model -->
+            <div class="slide" id="slide-2">
+                <h2 class="text-3xl font-black text-[#002D42] mb-6">מודל הקרחון המערכתי</h2>
+                <div class="grid grid-cols-12 gap-8 flex-grow items-center">
+                    <div class="col-span-5 relative">
+                        <svg viewBox="0 0 200 200" class="w-full">
+                            <path d="M100,20 L140,80 L60,80 Z" fill="#bae6fd" />
+                            <path d="M60,80 L140,80 L160,180 L40,180 Z" fill="#0ea5e9" opacity="0.8" />
+                            <line x1="20" y1="80" x2="180" y2="80" stroke="#0369a1" stroke-width="2" stroke-dasharray="4" />
+                            <text x="140" y="75" font-size="8" fill="#0369a1">פני השטח</text>
+                        </svg>
+                    </div>
+                    <div class="col-span-7 space-y-3">
+                        <div class="iceberg-level p-4 border rounded-xl bg-blue-50 border-blue-200">
+                            <h4 class="font-bold text-blue-800">1. אירועים (Events)</h4>
+                            <p class="text-xs text-blue-600">מה קורה עכשיו? (למשל: אישה מבטלת תור לבדיקה)</p>
+                        </div>
+                        <div class="iceberg-level p-4 border rounded-xl">
+                            <h4 class="font-bold text-slate-800">2. דפוסים (Patterns)</h4>
+                            <p class="text-xs text-slate-500">מה קורה לאורך זמן? (למשל: ירידה בהיענות בקרב נשים עם פוסט-טראומה)</p>
+                        </div>
+                        <div class="iceberg-level p-4 border rounded-xl">
+                            <h4 class="font-bold text-slate-800">3. מבנים (Structures)</h4>
+                            <p class="text-xs text-slate-500">איך בנויה המערכת? (למשל: תורים קצרים מדי, חוסר במידע מקדים)</p>
+                        </div>
+                        <div class="iceberg-level p-4 border rounded-xl bg-slate-900 text-white">
+                            <h4 class="font-bold text-teal-400">4. מודלים מנטליים (Mental Models)</h4>
+                            <p class="text-xs opacity-70">מהי תפיסת העולם? (למשל: "הבדיקה היא אירוע טכני בלבד")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: 4 Dimensions of Impact -->
+            <div class="slide" id="slide-3">
+                <h2 class="text-3xl font-black text-[#002D42] mb-10">ארבעת ממדי האימפקט</h2>
+                <div class="grid grid-cols-4 gap-6 flex-grow">
+                    <div class="p-8 bg-white border-b-4 border-blue-500 rounded-2xl shadow-sm hover:shadow-md transition-all text-center">
+                        <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-gavel text-2xl text-blue-500"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4 text-blue-900">אסטרטגי</h4>
+                        <p class="text-sm text-slate-500">שינוי מדיניות, חקיקה ונהלים ברמה הלאומית.</p>
+                    </div>
+                    <div class="p-8 bg-white border-b-4 border-teal-500 rounded-2xl shadow-sm hover:shadow-md transition-all text-center">
+                        <div class="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-sitemap text-2xl text-teal-500"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4 text-teal-900">מבני</h4>
+                        <p class="text-sm text-slate-500">הקצאת משאבים, טכנולוגיה ותשתיות חדשות.</p>
+                    </div>
+                    <div class="p-8 bg-white border-b-4 border-purple-500 rounded-2xl shadow-sm hover:shadow-md transition-all text-center">
+                        <div class="w-16 h-16 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-users text-2xl text-purple-500"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4 text-purple-900">תרבותי</h4>
+                        <p class="text-sm text-slate-500">שינוי נורמות, שפה ושיח ציבורי סביב הבעיה.</p>
+                    </div>
+                    <div class="p-8 bg-white border-b-4 border-amber-500 rounded-2xl shadow-sm hover:shadow-md transition-all text-center">
+                        <div class="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-heart text-2xl text-amber-500"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-4 text-amber-900">אישי/יחסים</h4>
+                        <p class="text-sm text-slate-500">שינוי אמונות, רמת אמון ותחושת מסוגלות.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Systemic Dynamics Chart -->
+            <div class="slide" id="slide-4">
+                <h2 class="text-3xl font-black text-[#002D42] mb-10">דינמיקה של שינוי ארוך טווח</h2>
+                <div class="flex-grow flex flex-col justify-center">
+                    <div class="relative h-64 w-full border-b border-r border-slate-200">
+                        <svg viewBox="0 0 1000 250" preserveAspectRatio="none" class="w-full h-full">
+                            <path d="M0,230 Q250,220 500,150 T1000,50 L1000,250 L0,250 Z" fill="#ccfbf1" opacity="0.5" />
+                            <path d="M0,230 Q250,220 500,150 T1000,50" fill="none" stroke="#00A3A3" stroke-width="4" />
+                            <circle cx="500" cy="150" r="6" fill="#002D42" />
+                            <text x="510" y="145" font-size="14" font-weight="bold" fill="#002D42">נקודת המינוף</text>
+                        </svg>
+                        <div class="absolute bottom-[-30px] right-0 text-xs font-bold text-slate-400 uppercase">זמן (השקעה במערכת)</div>
+                        <div class="absolute top-0 right-[-60px] text-xs font-bold text-slate-400 uppercase rotate-90">אימפקט מצטבר</div>
+                    </div>
+                    <div class="mt-16 grid grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <h5 class="font-bold text-slate-400">שלב 1</h5>
+                            <p class="text-sm">טיפול במשברים נקודתיים</p>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="font-bold text-teal-600">שלב 2</h5>
+                            <p class="text-sm font-bold">שינוי מבני ושינוי תהליכים</p>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="font-bold text-slate-400">שלב 3</h5>
+                            <p class="text-sm">שינוי פרדיגמה מערכתית</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Practical Checklist -->
+            <div class="slide" id="slide-5">
+                <h2 class="text-3xl font-black text-[#002D42] mb-10">צ'ק-ליסט ליזמית בבוראות</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center flex-grow">
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-slate-50 transition-all cursor-default group">
+                            <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-teal-500 group-hover:text-white transition-all">1</div>
+                            <p class="font-bold text-lg text-slate-700">מהו הכשל המערכתי שאני פותרת (ולא רק הבעיה האישית)?</p>
+                        </div>
+                        <div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-slate-50 transition-all cursor-default group">
+                            <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-teal-500 group-hover:text-white transition-all">2</div>
+                            <p class="font-bold text-lg text-slate-700">איך הפתרון שלי משפיע על ניצול משאבים וקיצור תורים?</p>
+                        </div>
+                        <div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-slate-50 transition-all cursor-default group">
+                            <div class="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center group-hover:bg-teal-500 group-hover:text-white transition-all">3</div>
+                            <p class="font-bold text-lg text-slate-700">אילו מחזיקי עניין במערכת ירוויחו מהשינוי הזה (ROI)?</p>
+                        </div>
+                    </div>
+                    <div class="bg-teal-600 rounded-3xl p-10 text-white shadow-xl">
+                        <h4 class="text-2xl font-bold mb-6">משימה לסדנה:</h4>
+                        <p class="text-lg leading-relaxed opacity-90 italic">
+                            קחי את הפרויקט שלך ותרגמי "תחושה" ל-"מדד". <br><br>
+                            במקום "היא תרגיש פחות לבד", <br>
+                            כתבי: "היא תזדקק ל-15% פחות ביקורי חירום עקב החרדה".
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Summary Quote -->
+            <div class="slide" id="slide-6">
+                <div class="text-center my-auto space-y-10 px-20">
+                    <i class="fa-solid fa-quote-right text-6xl text-teal-100"></i>
+                    <h2 class="text-5xl font-black text-[#002D42] leading-tight">
+                        "חדשנות אמיתית בבריאות לא רק מטפלת בחולה, היא משנה את המערכת שבה החולה מטופל."
+                    </h2>
+                    <div class="w-20 h-1 bg-teal-500 mx-auto"></div>
+                    <p class="text-2xl text-slate-400 font-light">תודה רבה!</p>
+                </div>
+            </div>
+
+            <!-- Footer / Controls -->
+            <div class="flex justify-between items-center mt-12">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-[#002D42] rounded-xl flex items-center justify-center text-white font-bold italic">B</div>
+                    <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">Borot Impact Series</div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button id="prev-btn" class="w-12 h-12 border border-slate-200 rounded-full flex items-center justify-center text-slate-400 hover:bg-white hover:text-[#002D42] transition-all">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button id="next-btn" class="w-12 h-12 bg-[#00A3A3] rounded-full flex items-center justify-center text-white shadow-lg shadow-teal-100 hover:bg-[#008a8a] transition-all">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 7;
+
+        const updateUI = () => {
+            document.querySelectorAll('.slide').forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            document.getElementById('progress-bar').style.width = `${progress}%`;
+
+            document.getElementById('prev-btn').style.opacity = currentSlide === 0 ? '0.3' : '1';
+            document.getElementById('next-btn').style.opacity = currentSlide === totalSlides - 1 ? '0.3' : '1';
+        };
+
+        document.getElementById('next-btn').addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) { currentSlide++; updateUI(); }
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', () => {
+            if (currentSlide > 0) { currentSlide--; updateUI(); }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') document.getElementById('next-btn').click();
+            if (e.key === 'ArrowRight') document.getElementById('prev-btn').click();
+        });
+
+        updateUI();
+    </script>
+</body>
+</html>
